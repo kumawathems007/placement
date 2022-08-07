@@ -4,11 +4,11 @@ import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('/content/drive/MyDrive/kn1_model.pkl', 'rb'))
-model = pickle.load(open('/content/drive/MyDrive/nb1_model.pkl', 'rb'))
-model = pickle.load(open('/content/drive/MyDrive/dt1_model.pkl', 'rb'))
-model = pickle.load(open('/content/drive/MyDrive/rf1_model.pkl', 'rb'))
-model = pickle.load(open('/content/drive/MyDrive/li1_model.pkl', 'rb')) 
+model = pickle.load(open('kn1_model.pkl', 'rb'))
+model = pickle.load(open('nb1_model.pkl', 'rb'))
+model = pickle.load(open('dt1_model.pkl', 'rb'))
+model = pickle.load(open('rf1_model.pkl', 'rb'))
+model = pickle.load(open('li1_model.pkl', 'rb')) 
 
 @app.route('/')
 def home():
@@ -35,5 +35,5 @@ def predict():
     
         
     return render_template('index2.html', prediction_text='All Model  has predicted Placment for given Data is : {}'.format(prediction))
-   if __name__
-app.run(debug=True)
+    if __name__=="__main__"
+         app.run(debug=True)
