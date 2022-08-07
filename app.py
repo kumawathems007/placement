@@ -1,6 +1,5 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-from flask_ngrok import run_with_ngrok
 import pickle
 
 
@@ -10,7 +9,6 @@ model = pickle.load(open('/content/drive/MyDrive/nb1_model.pkl', 'rb'))
 model = pickle.load(open('/content/drive/MyDrive/dt1_model.pkl', 'rb'))
 model = pickle.load(open('/content/drive/MyDrive/rf1_model.pkl', 'rb'))
 model = pickle.load(open('/content/drive/MyDrive/li1_model.pkl', 'rb')) 
-run_with_ngrok(app)
 
 @app.route('/')
 def home():
@@ -37,5 +35,5 @@ def predict():
     
         
     return render_template('index2.html', prediction_text='All Model  has predicted Placment for given Data is : {}'.format(prediction))
-   
-app.run()
+   if __name__
+app.run(debug=True)
